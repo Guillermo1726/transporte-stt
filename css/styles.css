@@ -132,7 +132,7 @@ body {
 .hero {
     background:
         linear-gradient(#01071df1),
-        url("../img/camion1.png") center/cover no-repeat;
+        url("../img/img/camion1.png") center/cover no-repeat;
     background-position: center -349px;
     height: 300px;
     display: flex;

@@ -1,0 +1,308 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+}
+
+
+
+/* === HEADER === */
+.header {
+    background:
+        linear-gradient(#011355f7),
+        url("../img/camion1.png") center/cover no-repeat;
+    background-position: center -250px;
+    color: #fff;
+    padding: 25px 0;
+    margin-bottom: 3px;
+}
+
+.header .container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    /* arranca invisible */
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+    margin-left: 10px;
+    margin-top: -35px;
+    margin-bottom: -25px;
+
+    opacity: 0;
+    /* arranca invisible */
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+
+.nav a {
+    color: #fff;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    /* o center si querés en medio */
+    align-items: center;
+    margin-left: 20px;
+    /* empuja los botones al extremo derecho */
+}
+
+.language-switch button {
+    background-color: #011355;
+    /* color base igual al header */
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    /* redondeados tipo “pill” */
+    padding: 8px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* sombra suave */
+    position: relative;
+    overflow: hidden;
+}
+
+.language-switch button::after {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: rgba(255, 255, 255, 0.2);
+    top: -110%;
+    left: -10%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+}
+
+.language-switch button:hover::after {
+    top: -10%;
+    left: -10%;
+}
+
+.language-switch button:hover {
+    background-color: #fff;
+    color: #011355;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* === HERO === */
+.hero {
+    background:
+        linear-gradient(#01071df1),
+        url("../img/camion1.png") center/cover no-repeat;
+    background-position: center -349px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e2e2e2;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.flags .flag {
+    width: 36px;
+    /* tamaño de la bandera */
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.flags .flag:hover {
+    transform: scale(1.6);
+    /* agranda la bandera */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    /* sombra más marcada */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    /* brillo alrededor */
+    z-index: 10;
+    /* que quede por encima de otras banderas */
+}
+
+@media (max-width:480px) {
+    .flags .flag {
+        width: 28px;
+    }
+
+    .flags {
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+}
+
+/* === SECTIONS === */
+.section {
+    margin-top: 4px;
+    background:
+        linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 /60%)),
+        url("../img/camion.png") center/cover no-repeat;
+    background-position: top;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #e2e2e2;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* === CARDS === */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center center;
+    /* para que escale desde el centro */
+}
+
+/* hover: agrandar y opacar fondo */
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    /* agranda la card completa */
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.bg-light {
+    background:
+        linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 /60%)),
+        url("../img/camion.png") center/cover no-repeat;
+    background-position: center -300px;
+    padding: 60px 20px;
+    text-align: center;
+    display: block;
+    /* IMPORTANTE */
+    height: auto;
+}
+
+
+/* === FORM === */
+
+.section-form {
+    margin-top: 3px;
+    background:
+        linear-gradient(rgba(1, 19, 85, 0.95), rgba(1, 19, 85, 0.95)),
+        url("../img/logo.png") no-repeat;
+    height: 480px;
+    background-size: 900px 550px;
+    background-position: center -70px;
+    padding: 70px 0px;
+    text-align: center;
+    background-color: #011355;
+}
+
+.form {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form textarea {
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    opacity: 65%;
+}
+
+.form button {
+    padding: 12px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #444;
+}
+
+/* === FOOTER === */
+.footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}

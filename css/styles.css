@@ -15,7 +15,7 @@ body {
 .header {
     background:
         linear-gradient(#011355f7),
-        url("../img/img/camion1.png") center/cover no-repeat;
+        url("../img/camion1.png") center/cover no-repeat;
     background-position: center -250px;
     color: #fff;
     padding: 25px 0;

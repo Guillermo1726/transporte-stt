@@ -243,6 +243,13 @@ body {
     margin-bottom: 10px;
 }
 
+.card-link, .boton-flota {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
 .bg-light {
     background:
         linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 /60%)),
@@ -254,6 +261,7 @@ body {
     /* IMPORTANTE */
     height: auto;
 }
+
 
 
 /* === FORM === */
@@ -416,3 +424,4 @@ body {
         /* se adapta mejor para móvil */
     }
 }
+

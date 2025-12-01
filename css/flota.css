@@ -1,0 +1,121 @@
+/* === RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* === HERO GENERAL === */
+.flota-hero {
+    background:
+        linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 /60%)),
+        url("../img/galpon.png") center/cover no-repeat;
+    background-position:center;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.flota-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 19, 85, 0.82);
+    z-index: 1;
+}
+
+.flota-hero h2,
+.flota-hero p {
+    position: relative;
+    z-index: 2;
+}
+
+.flota-hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.flota-hero p {
+    font-size: 18px;
+    opacity: .9;
+}
+
+/* === CONTENIDO === */
+.flota-content {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.flota-content h3 {
+    font-size: 28px;
+    color: #011355;
+    margin-bottom: 15px;
+}
+
+.flota-content p {
+    line-height: 1.7;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.flota-content ul {
+    margin-left: 20px;
+}
+
+.flota-content ul li {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 8px;
+}
+
+/* === BOTÓN === */
+.flota-btn {
+    display: inline-block;
+    background: #011355;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 30px;
+}
+
+.flota-btn:hover {
+    background: #02227a;
+}
+
+/* === FOOTER === */
+.flota-footer {
+    background: #011355;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+    .flota-hero h2 {
+        font-size: 30px;
+    }
+    .flota-content {
+        margin: 20px;
+        padding: 15px;
+    }
+}

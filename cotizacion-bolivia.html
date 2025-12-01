@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización – Envíos desde/hacia Bolivia</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(1,19,85,0.9), rgba(1,19,85,0.9)),
+                        url("img/imagen-sudamerica.png") center/cover no-repeat;
+            color: white;
+            font-family: Inter, sans-serif;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .card-form {
+            background: rgba(255,255,255,0.9);
+            color: #011355;
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #777;
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #011355;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cotización Argentina – Bolivia</h1>
+    <p>Completá este formulario para envíos desde o hacia Bolivia.</p>
+
+    <div class="card-form">
+        <form action="https://formspree.io/f/xjkgqaol" method="POST">
+
+            <label>Nombre completo</label>
+            <input name="nombre" required>
+
+            <label>Teléfono</label>
+            <input name="telefono" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Origen</label>
+            <input name="origen" required>
+
+            <label>Destino</label>
+            <input name="destino" required>
+
+            <label>Tipo de carga</label>
+            <input name="carga">
+
+            <label>Peso (kg)</label>
+            <input type="number" name="peso">
+
+            <label>Mensaje adicional</label>
+            <textarea name="mensaje"></textarea>
+
+            <button>Enviar cotización</button>
+        </form>
+    </div>
+
+    <a href="index.html">← Volver al inicio</a>
+
+</body>
+</html>

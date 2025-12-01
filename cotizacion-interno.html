@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotización – Viajes dentro de Argentina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(1,19,85,0.9), rgba(1,19,85,0.9)),
+                        url("img/argentina.png") center/cover no-repeat;
+            color: white;
+            font-family: Inter, sans-serif;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .card-form {
+            background: rgba(255,255,255,0.9);
+            color: #011355;
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.4em;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #777;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #011355;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #022080;
+        }
+
+        a {
+            color: white;
+            display: inline-block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cotización de Viajes Nacionales</h1>
+    <p>Completá el siguiente formulario para solicitar una cotización dentro de Argentina.</p>
+
+    <div class="card-form">
+        <form action="https://formspree.io/f/xjkgqaol" method="POST">
+
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+
+            <label>Teléfono</label>
+            <input type="text" name="telefono" placeholder="Tu teléfono" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Tu correo" required>
+
+            <label>Ciudad de Origen</label>
+            <input type="text" name="origen" placeholder="Ej: Rosario" required>
+
+            <label>Ciudad de Destino</label>
+            <input type="text" name="destino" placeholder="Ej: Córdoba" required>
+
+            <label>Tipo de carga</label>
+            <input type="text" name="carga" placeholder="Descripción de la carga">
+
+            <label>Peso aproximado (kg)</label>
+            <input type="number" name="peso" placeholder="Ej: 1200">
+
+            <label>Mensaje adicional</label>
+            <textarea name="mensaje" rows="4" placeholder="Detalles adicionales"></textarea>
+
+            <button type="submit">Enviar cotización</button>
+        </form>
+    </div>
+
+    <a href="index.html">← Volver al inicio</a>
+
+</body>
+</html>

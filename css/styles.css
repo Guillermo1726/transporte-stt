@@ -336,3 +336,93 @@ body {
         margin-left: 0;
     }
 }
+
+/* Ocultar el menú y el hamburguesa en PC */
+.hamburger,
+.mobile-menu {
+    display: none;
+}
+
+
+/* Apariencia del botón hamburguesa */
+.hamburger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* Las 3 rayitas */
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+
+/* Menú móvil desplegable */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: white;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-left: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1500;
+}
+
+/* Enlaces dentro del menú */
+.mobile-menu a {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* Cuando el menú está visible */
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+
+/* Mostrar hamburguesa SOLO en móvil */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 70px; /* para no tapar botones de idioma */
+        top: 20px;
+    }
+
+    /* Ocultamos el menú regular si tenés uno */
+    nav ul {
+        display: none;
+    }
+}
+
+/* Ocultar siempre en PC */
+.hamburger {
+    display: none !important;
+}
+
+/* Mostrar SOLO en móviles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        position: absolute;
+        right: 70px;
+        top: 20px;
+        z-index: 2000;
+    }
+}

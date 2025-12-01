@@ -132,10 +132,11 @@ body {
 .hero {
     background:
         linear-gradient(#01071df1),
-        url("../img/camion1.png") center/cover no-repeat;
+        url("../img/imagen-sudamerica.png") center/cover no-repeat;
     background-position: center -349px;
     height: 300px;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     color: #e2e2e2;
@@ -189,8 +190,9 @@ body {
     background:
         linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 /60%)),
         url("../img/camion.png") center/cover no-repeat;
-    background-position: top;
-    height: 300px;
+    background-position: center 30%;
+    min-height: 500px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +210,7 @@ body {
 .cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
 }
 
@@ -244,9 +246,9 @@ body {
 .bg-light {
     background:
         linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 /60%)),
-        url("../img/camion.png") center/cover no-repeat;
-    background-position: center -300px;
-    padding: 60px 20px;
+        url("../img/camion1.png") center/cover no-repeat;
+    background-position: center;
+    padding: 10%;
     text-align: center;
     display: block;
     /* IMPORTANTE */
@@ -307,7 +309,7 @@ body {
     text-align: center;
 }
 
-/* ===== HAMBURGUESA ===== */
+/* === MENU HAMBURGUESA === */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -315,23 +317,24 @@ body {
     cursor: pointer;
 }
 
-.hamburger span {
-    width: 25px;
+.hamburger div {
+    width: 28px;
     height: 3px;
     background: white;
 }
 
-/* ===== MENÚ MÓVIL ===== */
+/* === MENU MOBILE OCULTO === */
 .mobile-menu {
     display: none;
     flex-direction: column;
-    gap: 20px;
     background: #011355;
-    position: absolute;
-    top: 95px;
-    right: 20px;
+    width: 100%;
     padding: 20px;
-    border-radius: 10px;
+    gap: 20px;
+    position: absolute;
+    top: 15%;
+    /* debajo del header */
+    left: 0;
 }
 
 .mobile-menu a {
@@ -340,14 +343,76 @@ body {
     font-size: 18px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
 
-    .nav {
-        display: none; /* Se oculta menú normal */
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    header.header {
+        height: 120px;
     }
 
+    /* Ocultar menú normal */
+    .nav {
+        display: none;
+    }
+
+    /* Mostrar hamburguesa */
     .hamburger {
-        display: flex; /* Aparece hamburguesa */
+        display: flex;
+        margin-right: 10px;
+        z-index: 999;
+    }
+
+    /* Reorganizar el container */
+    .header .container {
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Logo a la izquierda */
+    .logo img {
+        margin: 0;
+        height: 70px;
+    }
+
+    /* Idioma arriba a la derecha */
+    .language-switch {
+        order: 3;
+        margin-left: 0;
+    }
+
+    /* Hamburguesa a la derecha debajo del logo */
+    .hamburger {
+        order: 2;
+    }
+
+    /* Asegurar que nada quede superpuesto */
+    .header {
+        position: relative;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background-position: center;
+    }
+
+    .hero {
+        background-position: top;
+    }
+
+    .section {
+        background-position: center;
+    }
+
+
+    .bg-light {
+        background-position: center);
+    }
+
+    .section-form {
+        background-position: center;
+        background-size: cover;
+        /* se adapta mejor para móvil */
     }
 }

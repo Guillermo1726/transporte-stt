@@ -78,9 +78,12 @@ document.getElementById('lang-pt').addEventListener('click', () => setLanguage('
 // Idioma por defecto
 setLanguage('es');
 
-<script>
+
 function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    const menu = document.getElementById("mobile-menu");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
 }
-</script>

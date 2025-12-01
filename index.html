@@ -11,28 +11,16 @@
 <body>
     <header class="header">
         <div class="container">
+
             <h1 class="logo">
                 <img src="img/logo.png" alt="Transporte Regional">
             </h1>
 
+            <!--nav pc-->
             <nav class="nav">
                 <a href="#servicios" data-i18n="nav-servicios">Servicios</a>
                 <a href="#flota" data-i18n="nav-flota">Flota</a>
                 <a href="#contacto" data-i18n="nav-contacto">Contacto</a>
-            </nav>
-
-            <!-- Botón hamburguesa -->
-            <div class="hamburger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-
-            <!-- Menú móvil -->
-            <nav class="mobile-menu" id="mobile-menu">
-                <a href="#services">Servicios</a>
-                <a href="#fleet">Flota</a>
-                <a href="#contact">Contacto</a>
             </nav>
 
             <!-- Botones de idioma -->
@@ -42,6 +30,24 @@
             </div>
         </div>
     </header>
+
+    <!-- HAMBURGUESA (solo visible en móvil) -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- MENÚ MÓVIL -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#services">Servicios</a>
+        <a href="#fleet">Flota</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
 
     <section class="hero">
         <div class="hero-content">
